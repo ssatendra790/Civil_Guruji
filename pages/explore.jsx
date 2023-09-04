@@ -14,9 +14,9 @@ export default function Explore() {
         
         {/* <Categories/> */}
         <div className={styles.content}>
-          <CourseCarousel title="Online Courses" />
-          <PackageCarousel title="Top Packages" />
-          <CourseCarousel title="Free Courses" />
+          <CourseCarousel title="▱ Trending Courses" />
+          <PackageCarousel title="▱ Online Packages" />
+          <CourseCarousel title="▱ Free Courses" />
         </div>
       </div>
     </Layout>
