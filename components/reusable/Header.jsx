@@ -2,6 +2,7 @@
 import styles from "@/styles/Header.module.css";
 import { Button } from "@chakra-ui/react";
 import Link from "next/link";
+import { SearchBar } from "./Search";
 
 export default function Header() {
   return (
@@ -10,6 +11,7 @@ export default function Header() {
         <h1>Civil Guruji</h1>
       </Link>
       <ul>
+        <li><SearchBar/></li>
         <Link href="/explore">
           <li>Explore</li>
         </Link>
@@ -20,7 +22,6 @@ export default function Header() {
         <Link href="/login">
           <Button>Login</Button>
         </Link>
-        {/* <li id={styles.profile}>Harsh Pandey</li> */}
       </ul>
     </div>
   );

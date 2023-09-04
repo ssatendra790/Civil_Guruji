@@ -11,6 +11,7 @@ export default function Explore() {
     <Layout>  
       <div className={`wrapper ${styles.container}`}>
         <Banner/> 
+        
         {/* <Categories/> */}
         <div className={styles.content}>
           <CourseCarousel title="Online Courses" />
