@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "@/styles/Swiper.module.css";
 import Cardforyou from "./Cardforyou";
 
-const packages = [["Web Development","React Developer"], ["Python","Python Developer"], ["C++","CPP Developer"], ["Flutter","Mobile Developer"], ["DSA","Data Structures"], ["CP","Competitve Programmer"]];
+const packages = [["Web Development","React Developer"], ["Python","Python Developer"], ["C++","CPP Developer"], ["Flutter","Mobile Developer"], ["DSA","Data Structures"], ["CP","Competitive Programmer"]];
 
 export default function ForyouCarousel({ title, className }) {
     return (

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import styles from "@/styles/Card.module.css";
 import { useRouter } from "next/router";
 import { AiOutlineNumber } from "react-icons/ai";
@@ -28,7 +27,7 @@ export default function Cardforyou({
               allow="autoplay"
               allowFullScreen
               controls="false"
-              borderRadius="8px"
+              borderRadius="8 px"
             ></iframe>
             <h2>Web 3.0</h2>
           </>

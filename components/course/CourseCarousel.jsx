@@ -61,7 +61,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation } from "swiper/core"; // Import Navigation module
+import SwiperCore, { Navigation } from "swiper/core"; 
 
 import Card from "./Card";
 import styles from "@/styles/Swiper.module.css";
