@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper";
+import { Navigation } from "swiper";
 import Card from "./Card";
 import styles from "@/styles/Swiper.module.css";
 
 import "swiper/css/free-mode";
 import { Button } from "@chakra-ui/react";
+import Link from "next/link";
 
-const packages = [1, 2, 3, 4, 5, 6];
+const packages = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function PackageCarousel({ title, className, hideBtn }) {
   const [preview, setPreview] = useState(null);
+  const [swiper, setSwiper] = useState(null);
+  const [isEnd, setIsEnd] = useState(false);
 
   let timer;
 
@@ -27,18 +30,33 @@ export default function PackageCarousel({ title, className, hideBtn }) {
     setPreview(null);
   };
 
+  useEffect(() => {
+    if (swiper) {
+      swiper.on("reachEnd", () => {
+        setIsEnd(true);
+      });
+    }
+  }, [swiper]);
+
+
   return (
     <div className={`${styles.container} ${className}`}>
       <div className={styles.header}>
         <h3>{title}</h3>
-        {!hideBtn ? <Button variant="ghost">View All</Button> : null}
+        {!hideBtn ?( 
+          <Link href="/AllPackage">
+              <Button variant="ghost">View All</Button>
+          </Link>)
+          : null}
       </div>
       <Swiper
-        slidesPerView={"auto"}
+        slidesPerView={3}
         spaceBetween={20}
         freeMode={true}
-        modules={[FreeMode]}
+        modules={[Navigation]}
         className="courseCards"
+        navigation={true}
+        onSwiper={(swiper) => setSwiper(swiper)}
       >
         {packages.map((idx) => (
           <SwiperSlide key={idx} style={{ zIndex: preview === idx ? 2 : 1 }}>

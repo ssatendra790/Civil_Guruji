@@ -210,12 +210,6 @@
     order: 2;
   }
 
-  /* 
-    .heading {
-      margin-top: 40px;
-      margin-bottom: 16px;
-    } */
-
   .flex {
     flex-direction: column;
     gap: 12px;

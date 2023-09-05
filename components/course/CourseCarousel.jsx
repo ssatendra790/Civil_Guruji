@@ -72,6 +72,8 @@ import "swiper/css/free-mode";
 
 import { Button } from "@chakra-ui/react";
 
+import Link from "next/link";
+
 SwiperCore.use([Navigation]);
 
 const courses = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -107,15 +109,10 @@ export default function CourseCarousel({ title, className, hideBtn }) {
     <div className={`${styles.container} ${className}`}>
       <div className={styles.header}>
         <h3>{title}</h3>
-        {!hideBtn ? (
-          <Button
-            variant="ghost"
-            onClick={handleViewAllClick}
-            disabled={isEnd}
-          >
-            View All
-          </Button>
-        ) : null}
+        {!hideBtn ?( 
+          <Link href="/AllPackage">
+              <Button variant="ghost">View All</Button>
+          </Link>): null}
       </div>
       <Swiper
         slidesPerView={3}
