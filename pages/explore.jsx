@@ -6,10 +6,13 @@ import Banner from "@/components/course/Banner";
 import PackageCarousel from "@/components/package/PackageCarousel";
 
 export default function Explore() {
+
   return (
     <Layout>  
       <div className={`wrapper ${styles.container}`}>
-        <Banner/> 
+        <div className="hidden sm:block"> 
+          <Banner/> 
+        </div> 
         <div className={styles.content}>
           <CourseCarousel title="▱ Trending Courses" />
           <PackageCarousel title="▱ Online Packages" />
